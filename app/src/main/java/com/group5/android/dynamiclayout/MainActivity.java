@@ -12,13 +12,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_main);
-        ConstraintLayout cl = new ConstraintLayout(this);
+        setContentView(R.layout.activity_main);
+        /*ConstraintLayout cl = new ConstraintLayout(this);
         cl.setLayoutParams(new ConstraintLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
         setContentView(cl);
         TextView helloText = new TextView(this);
         helloText.setText(R.string.helloWorld);
         helloText.setLayoutParams(new ConstraintLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-        cl.addView(helloText);
+        cl.addView(helloText);*/
     }
 }
