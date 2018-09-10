@@ -3,4 +3,6 @@
     <string name="click_me">Click Me!</string>
     <string name="helloWorld">Hello World !!</string>
     <string name="imageViewDes">Profile Avatar</string>
+    <string name="avatar">AVATAR</string>
+
 </resources>
