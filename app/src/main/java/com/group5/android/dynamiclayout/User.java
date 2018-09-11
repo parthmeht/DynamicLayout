@@ -1,16 +1,16 @@
 package com.group5.android.dynamiclayout;
 
-import android.util.Log;
+import java.io.Serializable;
 
-public class User {
+public class User implements Serializable {
     private String firstName;
     private String lastName;
     private String name;
-    private Long studentId;
-    private String avatar;
+    private Integer studentId;
+    private Object avatar;
     private String department;
 
-    public User(String firstName, String lastName, Long studentId, String avatar, String department) {
+    public User(String firstName, String lastName, Integer studentId, Object avatar, String department) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.studentId = studentId;
@@ -37,19 +37,27 @@ public class User {
         this.lastName = lastName;
     }
 
-    public Long getStudentId() {
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getStudentId() {
         return studentId;
     }
 
-    public void setStudentId(Long studentId) {
+    public void setStudentId(Integer studentId) {
         this.studentId = studentId;
     }
 
-    public String getAvatar() {
+    public Object getAvatar() {
         return avatar;
     }
 
-    public void setAvatar(String avatar) {
+    public void setAvatar(Object avatar) {
         this.avatar = avatar;
     }
 
@@ -59,14 +67,6 @@ public class User {
 
     public void setDepartment(String department) {
         this.department = department;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     @Override
