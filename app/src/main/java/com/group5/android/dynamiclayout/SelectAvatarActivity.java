@@ -3,6 +3,8 @@ package com.group5.android.dynamiclayout;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.media.Image;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,47 +18,54 @@ public class SelectAvatarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_avatar);
         final Intent returnIntent = new Intent();
+        final ImageButton b1 = findViewById(R.id.avatar1);
+
+        final ImageButton b2 = findViewById(R.id.avatar2);
+        final ImageButton b3 = findViewById(R.id.avatar3);
+        final ImageButton b4 = findViewById(R.id.avatar4);
+        final ImageButton b5 = findViewById(R.id.avatar5);
+        final ImageButton b6 = findViewById(R.id.avatar6);
 
         setResult(Activity.RESULT_OK,returnIntent);
-        findViewById(R.id.avatar1).setOnClickListener(new View.OnClickListener() {
+        b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                returnIntent.putExtra("result",1);
+                returnIntent.putExtra("result",b1.getId());
                 finish();
             }
         });
-        findViewById(R.id.avatar2).setOnClickListener(new View.OnClickListener() {
+        b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                returnIntent.putExtra("result",2);
+                returnIntent.putExtra("result",b2.getId());
                 finish();
             }
         });
-        findViewById(R.id.avatar3).setOnClickListener(new View.OnClickListener() {
+        b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                returnIntent.putExtra("result",3);
+                returnIntent.putExtra("result",b3.getId());
                 finish();
             }
         });
-        findViewById(R.id.avatar4).setOnClickListener(new View.OnClickListener() {
+        b4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                returnIntent.putExtra("result",4);
+                returnIntent.putExtra("result",b4.getId());
                 finish();
             }
         });
-        findViewById(R.id.avatar5).setOnClickListener(new View.OnClickListener() {
+        b5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                returnIntent.putExtra("result",5);
+                returnIntent.putExtra("result",b5.getId());
                 finish();
             }
         });
-        findViewById(R.id.avatar6).setOnClickListener(new View.OnClickListener() {
+        b6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                returnIntent.putExtra("result",6);
+                returnIntent.putExtra("result",b6.getId());
                 finish();
             }
         });

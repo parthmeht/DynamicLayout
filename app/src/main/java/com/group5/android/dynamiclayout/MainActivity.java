@@ -7,7 +7,9 @@ import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -26,10 +28,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ImageView avatarImage = findViewById(R.id.imageView);
+        final Intent i1 = new Intent(this, SelectAvatarActivity.class);
+
+        avatarImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivityForResult(i1,1);
+            }
+        });
         String str = "hello ";
         Log.d("HEloo",str);
-        Intent i = new Intent(this, SelectAvatarActivity.class);
-        startActivityForResult(i,1);
+
+
 
 
 
