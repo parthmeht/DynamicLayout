@@ -5,6 +5,7 @@ import android.util.Log;
 public class User {
     private String firstName;
     private String lastName;
+    private String name;
     private Long studentId;
     private String avatar;
     private String department;
@@ -15,6 +16,9 @@ public class User {
         this.studentId = studentId;
         this.avatar = avatar;
         this.department = department;
+        if (firstName!=null && "".equalsIgnoreCase(firstName) && lastName!=null && "".equalsIgnoreCase(lastName)){
+            this.name = firstName + " " + lastName;
+        }
     }
 
     public String getFirstName() {
@@ -57,11 +61,20 @@ public class User {
         this.department = department;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     @Override
     public String toString() {
         return "User{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
+                ", name='" + name + '\'' +
                 ", studentId=" + studentId +
                 ", avatar='" + avatar + '\'' +
                 ", department='" + department + '\'' +
