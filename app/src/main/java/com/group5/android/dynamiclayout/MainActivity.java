@@ -11,8 +11,12 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
     String avatarString;
@@ -24,6 +28,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         context = this.getApplicationContext();
+        Button buttonSave = findViewById(R.id.buttonSave);
+        EditText firstName = findViewById(R.id.editTextFirstName);
+        EditText lastName = findViewById(R.id.editTextLastName);
+        EditText studentId  = findViewById(R.id.editTextStudentId);
+
+
 
         final Intent i1 = new Intent(this, SelectAvatarActivity.class);
         ImageView avatarImage = findViewById(R.id.imageView);
@@ -31,6 +41,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivityForResult(i1,1);
+            }
+        });
+        buttonSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                if ()
             }
         });
 
