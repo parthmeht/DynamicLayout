@@ -11,4 +11,7 @@
     <string name="bio">BIO</string>
     <string name="other">Other</string>
     <string name="avatar">AVATAR</string>
+    <string name="name">Name:</string>
+    <string name="student_id">Student ID:</string>
+    <string name="edit">Edit</string>
 </resources>
