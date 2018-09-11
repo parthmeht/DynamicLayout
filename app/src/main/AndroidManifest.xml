@@ -16,8 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SelectAvatarActivity" />
-        <activity android:name=".DisplayActivity"></activity>
+        <activity android:name=".SelectAvatarActivity"
+            android:label="@string/select_avatar"/>
+        <activity android:name=".DisplayActivity"
+            android:label="@string/display_profile"/>
     </application>
 
 </manifest>

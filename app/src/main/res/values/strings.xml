@@ -14,4 +14,6 @@
     <string name="name">Name:</string>
     <string name="student_id">Student ID:</string>
     <string name="edit">Edit</string>
+    <string name="select_avatar">Select Avatar</string>
+    <string name="display_profile">Display My Profile</string>
 </resources>
