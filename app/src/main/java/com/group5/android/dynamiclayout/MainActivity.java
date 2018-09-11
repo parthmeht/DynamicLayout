@@ -4,6 +4,7 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
                 avatarString = data.getExtras().get("result").toString();
                 ImageView r = findViewById(R.id.imageView);
-//                r.setImageDrawable(getDrawable());
+                r.setImageDrawable(getDrawable((Integer) data.getExtras().get("result")));
 
 
                 Log.d("result",data.getExtras().get("result").toString());
