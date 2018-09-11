@@ -1,11 +1,14 @@
+/*
+ * Copyright (c)
+ *  @Group 5
+ *  Kshitij Shah - 801077782
+ *  Parth Mehta - 801057625
+ */
+
 package com.group5.android.dynamiclayout;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.IntentFilter;
-import android.media.Image;
-import android.net.Uri;
-import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -28,7 +31,7 @@ public class SelectAvatarActivity extends AppCompatActivity {
         final ImageButton b5 = findViewById(R.id.avatar5);
         final ImageButton b6 = findViewById(R.id.avatar6);
 
-        setResult(Activity.RESULT_OK,returnIntent);
+        setResult(Activity.RESULT_OK, returnIntent);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,21 +43,21 @@ public class SelectAvatarActivity extends AppCompatActivity {
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                returnIntent.putExtra("result",R.drawable.avatar_f_2);
+                returnIntent.putExtra("result", R.drawable.avatar_f_2);
                 finish();
             }
         });
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                returnIntent.putExtra("result",R.drawable.avatar_f_3);
+                returnIntent.putExtra("result", R.drawable.avatar_f_3);
                 finish();
             }
         });
         b4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                returnIntent.putExtra("result",R.drawable.avatar_m_1);
+                returnIntent.putExtra("result", R.drawable.avatar_m_1);
                 finish();
             }
         });
@@ -62,18 +65,17 @@ public class SelectAvatarActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 //                returnIntent.putExtra("result",String.valueOf(b5.getDrawable()));
-                returnIntent.putExtra("result",R.drawable.avatar_m_2);
+                returnIntent.putExtra("result", R.drawable.avatar_m_2);
                 finish();
             }
         });
         b6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                returnIntent.putExtra("result",R.drawable.avatar_m_3);
+                returnIntent.putExtra("result", R.drawable.avatar_m_3);
                 finish();
             }
         });
-
 
 
     }

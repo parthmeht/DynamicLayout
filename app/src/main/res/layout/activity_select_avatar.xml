@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c)
+  ~  @Group 5
+  ~  Kshitij Shah - 801077782
+  ~  Parth Mehta - 801057625
+  -->
+
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"

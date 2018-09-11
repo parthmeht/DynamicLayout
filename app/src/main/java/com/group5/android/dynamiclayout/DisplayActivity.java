@@ -1,3 +1,10 @@
+/*
+ * Copyright (c)
+ *  @Group 5
+ *  Kshitij Shah - 801077782
+ *  Parth Mehta - 801057625
+ */
+
 package com.group5.android.dynamiclayout;
 
 import android.support.v7.app.AppCompatActivity;

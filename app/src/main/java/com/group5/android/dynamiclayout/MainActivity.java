@@ -1,3 +1,10 @@
+/*
+ * Copyright (c)
+ *  @Group 5
+ *  Kshitij Shah - 801077782
+ *  Parth Mehta - 801057625
+ */
+
 package com.group5.android.dynamiclayout;
 
 import android.app.Activity;
@@ -53,27 +60,27 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                final Bitmap bmap = ((BitmapDrawable)avatarImage.getDrawable()).getBitmap();
+                final Bitmap bmap = ((BitmapDrawable) avatarImage.getDrawable()).getBitmap();
                 Drawable myDrawable = getResources().getDrawable(R.drawable.select_image);
                 final Bitmap myLogo = ((BitmapDrawable) myDrawable).getBitmap();
 
-                if (bmap.sameAs(myLogo)){
+                if (bmap.sameAs(myLogo)) {
                     Toast.makeText(departmentGroup.getContext(), "Select a Profile Image", Toast.LENGTH_LONG).show();
-                } else if (firstName.getText().toString()==null || firstName.getText().toString().matches("")){
+                } else if (firstName.getText().toString() == null || firstName.getText().toString().matches("")) {
                     firstName.setError("Enter the First Name");
-                }else if (lastName.getText().toString()==null || lastName.getText().toString().matches("")){
+                } else if (lastName.getText().toString() == null || lastName.getText().toString().matches("")) {
                     lastName.setError("Enter the Last Name");
-                }else if (studentId.getText().toString()==null || studentId.getText().toString().matches("")){
+                } else if (studentId.getText().toString() == null || studentId.getText().toString().matches("")) {
                     studentId.setError("Enter the Student Id");
-                }else if (departmentGroup.getCheckedRadioButtonId()==-1){
+                } else if (departmentGroup.getCheckedRadioButtonId() == -1) {
                     Toast.makeText(departmentGroup.getContext(), "Select a radio button", Toast.LENGTH_LONG).show();
-                }else{
+                } else {
                     int radioButtonID = departmentGroup.getCheckedRadioButtonId();
                     RadioButton radioButton = departmentGroup.findViewById(radioButtonID);
-                    Log.d("Radio","radioButton.getText().toString()"+radioButton.getText().toString());
-                    User user =  new User(firstName.getText().toString(), lastName.getText().toString(), Integer.parseInt(studentId.getText().toString()), avatarString,radioButton.getText().toString());
+                    Log.d("Radio", "radioButton.getText().toString()" + radioButton.getText().toString());
+                    User user = new User(firstName.getText().toString(), lastName.getText().toString(), Integer.parseInt(studentId.getText().toString()), avatarString, radioButton.getText().toString());
                     Intent i2 = new Intent(getApplicationContext(), DisplayActivity.class);
-                    Log.d("wppp",user.getFirstName());
+                    Log.d("wppp", user.getFirstName());
                     i2.putExtra("studentData", (Serializable) user);
                     startActivity(i2);
                 }

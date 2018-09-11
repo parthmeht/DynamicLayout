@@ -1,3 +1,10 @@
+/*
+ * Copyright (c)
+ *  @Group 5
+ *  Kshitij Shah - 801077782
+ *  Parth Mehta - 801057625
+ */
+
 package com.group5.android.dynamiclayout;
 
 import java.io.Serializable;
@@ -5,7 +12,6 @@ import java.io.Serializable;
 public class User implements Serializable {
     private String firstName;
     private String lastName;
-    private String name;
     private Integer studentId;
     private Object avatar;
     private String department;
@@ -16,9 +22,6 @@ public class User implements Serializable {
         this.studentId = studentId;
         this.avatar = avatar;
         this.department = department;
-        if (firstName!=null && "".equalsIgnoreCase(firstName) && lastName!=null && "".equalsIgnoreCase(lastName)){
-            this.name = firstName + " " + lastName;
-        }
     }
 
     public String getFirstName() {
@@ -35,14 +38,6 @@ public class User implements Serializable {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public Integer getStudentId() {
@@ -74,9 +69,8 @@ public class User implements Serializable {
         return "User{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", name='" + name + '\'' +
                 ", studentId=" + studentId +
-                ", avatar='" + avatar + '\'' +
+                ", avatar=" + avatar +
                 ", department='" + department + '\'' +
                 '}';
     }
